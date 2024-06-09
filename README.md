@@ -1,17 +1,20 @@
-### Titanic Survival Prediction
-This project involves predicting the survival of passengers on the Titanic using various machine learning models. The dataset used for this project is the famous Titanic dataset, which contains information about the passengers and their survival status.
+# Titanic Survival Prediction
 
-### Project Structure
+## Description
+This project involves predicting the survival of passengers on the Titanic using various machine learning models.
+It demonstrates key aspects of data preprocessing, model training, hyperparameter tuning, and model evaluation.
+Learning these aspects is important for building and deploying machine learning models effectively.
 
-* 'titanic.csv' : This is the dataset file containing passenger information and survival status.
-* 'titanic_survival_prediction.ipynb' : This is the Jupyter Notebook containing the entire data processing and model training pipeline.
-* 'README.md' : This readme file provides an overview of the project.
+## Table of Contents
+1. [Installation](#installation)
+2. [Usage](#usage)
+    - [Loading Data](#loading-data)
+    - [Data Preprocessing](#data-preprocessing)
+    - [Model Training and Evaluation](#model-training-and-evaluation)
+3. [Credits](#credits)
 
-### Installation
-To run this project, you need to have Python and Jupyter Notebook installed. Additionally, you need to install the required Python libraries:
-The below code enables you to do this:
+## Installation
 
-pip install pandas matplotlib scikit-learn
 
 ### Required Libraries used:
 
@@ -19,4 +22,33 @@ pip install pandas matplotlib scikit-learn
 * Numpy
 * Matplotlib
 * Skitlearn
+
+To run this project locally, you need to have Python and Jupyter Notebook installed. Additionally, install the required Python libraries:
+
+```bash
+pip install pandas matplotlib scikit-learn
+
+Usage
+Loading Data
+First, load the Titanic dataset:
+
+import pandas as pd
+
+titanic_df = pd.read_csv("titanic.csv")
+titanic_df.head()
+
+
+Data Preprocessing
+Drop Irrelevant Columns:
+
+titanic_df.drop(["Cabin", "Ticket"], axis=1, inplace=True)
+
+Handle Missing Values:
+
+titanic_temp = titanic_df.dropna()
+
+Credits
+This project was developed by Pascal Ononaku.
+
+If you have any questions or suggestions, feel free to open an issue or contact me directly via GitHub.
 
